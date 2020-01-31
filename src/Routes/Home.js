@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css';
 
 class Home extends React.Component {
   constructor(props) {
@@ -10,8 +11,9 @@ class Home extends React.Component {
 
   onAdopt = () => {
     const { history } = this.props;
-    history.push('/Adopt');
+    history.push('/Adoption');
   };
+
   render() {
     return (
       <div>
@@ -19,7 +21,7 @@ class Home extends React.Component {
           <h1>Petful</h1>
         </header>
 
-        <p>
+        <p className='intro'>
           Hello and welcome to Petful! If you are here to adopt a pet, then you
           are in the right place! If you are new, here's how it works: The
           adoption process is on a first come first serve basis so there may be
@@ -32,7 +34,7 @@ class Home extends React.Component {
           adopt one and wait in line until it is your turn again to adopt.
         </p>
 
-        <button type='click' className='adopt button' onClick={this.onAdopt}>
+        <button type='click' className='adopt-button' onClick={this.onAdopt}>
           Start Adoption Process
         </button>
       </div>
