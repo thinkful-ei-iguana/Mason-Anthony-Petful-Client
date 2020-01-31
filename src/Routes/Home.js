@@ -13,7 +13,7 @@ class Home extends React.Component {
 
   onAdopt = () => {
     const { history } = this.props;
-    history.push('/adopt')
+    history.push('/adoption')
   }
   render() {
 
