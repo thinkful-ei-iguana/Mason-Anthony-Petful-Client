@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Petful App
+Created by Mason Reichbauer and Anthony Bostic
+Live App Link:
+Client Side Repo Link:
+API Repo Link:
+
+## Technology Used
+React, HTML, CSS, JavaScript, JSX, Linked Listed, Queues
+
+
+## Summary 
+This is a pet adoption app that utilizes Queues and Linked lists. The adoption process is on a first come first serve basis (Queue) so there may be a wait, but you will be able to see where you are in line. Once it is your turn to adopt you will be presented with 2 animals, a cat and a dog. You can adopt the cat, the dog or both! The 2 animals that you will be presented with are a cat and a dog that have been here the longest (Queue). We do this to ensure that animals find a home as quick as possible. If you would like 2 of the same animal then you will have to adopt one and wait in line until it is your turn again to adopt.
 
 ## Available Scripts
 

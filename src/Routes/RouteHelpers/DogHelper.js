@@ -8,5 +8,13 @@ const DogHelper = {
       }
     });
   },
+  deleteDog() {
+    return fetch(`${config.REACT_APP_API_BASE}/dog/:id`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
+  },
 }
 export default DogHelper

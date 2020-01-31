@@ -8,5 +8,13 @@ const PeopleHelper = {
       }
     });
   },
+  deletePerson() {
+    return fetch(`${config.REACT_APP_API_BASE}/people`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
+  },
 }
 export default PeopleHelper
