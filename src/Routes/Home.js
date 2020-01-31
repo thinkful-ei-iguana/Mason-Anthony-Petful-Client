@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import './App.css';
+
+
 
 class Home extends React.Component {
   constructor(props) {
