@@ -10,6 +10,12 @@ export default class Adoption extends React.Component {
       cats: [],
     };
   }
+  componentDidMount() {
+    this.getDogs();
+    this.getCats();
+  }
+
+
   getDogs = () => {
 
   }
