@@ -1,3 +1,43 @@
 h1 {
+ 
   text-align: center;
+}
+
+.picture{
+  display: flex;
+  margin: 0 auto 0;
+  flex-shrink: 1;  
+  max-width: 358px;
+  max-height: 500px;
+}
+
+.desc {
+  max-width: 40%;
+  margin: 0 auto 0;
+}
+
+.Adoption{
+  
+}
+
+.queue{
+ text-align: center;
+}
+
+.dog{
+ max-width: 45%;
+ text-align: center;
+}
+.cat{
+  max-width: 45%;
+  text-align: center;
+}
+.animals{
+  display:flex;
+  
+  justify-content: space-around;
+}
+
+.bold {
+  font-weight: bold;
 }
