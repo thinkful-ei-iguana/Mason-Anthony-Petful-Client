@@ -32,6 +32,11 @@ export default class Adoption extends React.Component {
       })
   }
 
+  deleteDog = () => {
+    DogHelper.deleteDog();
+    this.deletePerson();
+  }
+
   getCat = () => {
     CatHelper.getCat()
       .then(res => res.json())
@@ -41,6 +46,11 @@ export default class Adoption extends React.Component {
       })
   }
 
+  deleteCat = () => {
+    CatHelper.deleteCat();
+    this.deletePerson();
+  }
+
   getQueue = () => {
     PeopleHelper.getQueue()
       .then(res => res.json())
@@ -48,6 +58,10 @@ export default class Adoption extends React.Component {
       .catch((error) => {
         this.setState({ error })
       })
+  }
+
+  deletePerson = () => {
+    PeopleHelper.deletePerson();
   }
 
   display = (q) => {
