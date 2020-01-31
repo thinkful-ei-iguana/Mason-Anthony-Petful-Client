@@ -34,11 +34,11 @@ export default class Adoption extends React.Component {
         <div className='dog'>
           <h2>Dogs</h2>
           <p>
-            <span className='bold'>  Name: </span>{dog.name}
-            <span className='bold'>  Breed: </span>{dog.breed}
-            <span className='bold'>  Age: </span>{dog.age}
-            <span className='bold'>  Sex: </span>{dog.sex}
-            <span className='bold'>  Description: </span>{dog.description}
+            <span className='bold'>  Name: </span>{dog.name} <br />
+            <span className='bold'>  Breed: </span>{dog.breed} <br />
+            <span className='bold'>  Age: </span>{dog.age} <br />
+            <span className='bold'>  Sex: </span>{dog.sex} <br />
+            <span className='bold'>  Description: </span>{dog.description} <br />
             <span className='bold'>  Story: </span>{dog.story}
           </p>
           <button>Adopt Dog</button>
@@ -47,11 +47,11 @@ export default class Adoption extends React.Component {
         <div className='cat'>
           <h2>Cats</h2>
           <p>
-            <span className='bold'>  Name: </span>{cat.name}
-            <span className='bold'>  Breed: </span>{cat.breed}
-            <span className='bold'>  Age: </span>{cat.age}
-            <span className='bold'>  Sex: </span>{cat.sex}
-            <span className='bold'>  Description: </span>{cat.description}
+            <span className='bold'>  Name: </span>{cat.name} <br />
+            <span className='bold'>  Breed: </span>{cat.breed} <br />
+            <span className='bold'>  Age: </span>{cat.age} <br />
+            <span className='bold'>  Sex: </span>{cat.sex} <br />
+            <span className='bold'>  Description: </span>{cat.description} <br />
             <span className='bold'>  Story: </span>{cat.story}
           </p>
           <button>Adopt Cat</button>
