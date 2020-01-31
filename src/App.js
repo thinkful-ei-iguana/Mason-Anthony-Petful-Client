@@ -17,7 +17,7 @@ function App() {
         />
         <Route
           exact
-          path='/Adoption'
+          path='/Adopt'
           render={renderProps => {
             return <Adoption {...renderProps} />;
           }}
