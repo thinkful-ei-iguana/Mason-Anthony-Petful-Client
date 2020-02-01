@@ -35,6 +35,7 @@ export default class Adoption extends React.Component {
   deleteDog = () => {
     DogHelper.deleteDog();
     this.deletePerson();
+    this.getDog();
   }
 
   getCat = () => {
@@ -49,6 +50,7 @@ export default class Adoption extends React.Component {
   deleteCat = () => {
     CatHelper.deleteCat();
     this.deletePerson();
+    this.getCat();
   }
 
   getQueue = () => {
@@ -62,6 +64,7 @@ export default class Adoption extends React.Component {
 
   deletePerson = () => {
     PeopleHelper.deletePerson();
+    this.getQueue();
   }
 
   display = (q) => {
