@@ -93,30 +93,30 @@ export default class Adoption extends React.Component {
         <div className='animals'>
           <div className='dog'>
             <h2>Dog</h2>
-            <p>
+            <div>
               <span className='animalPic'></span><img className='picture' src={dog.image} alt='puppy' /> <br />
               <span className='bold'>  Name: </span>{dog.name} <br />
               <span className='bold'>  Breed: </span>{dog.Breed} <br />
               <span className='bold'>  Age: </span>{dog.Age} <br />
               <span className='bold'>  Sex: </span>{dog.Sex} <br />
-              <span className='bold'>  Description: </span><div className='desc'>{dog.Description}</div> <br />
-              <span className='bold'>  Story: </span><div className='desc'>{dog.Story}</div>
-            </p>
-            <button>Adopt Dog</button>
+              <span className='bold'>  Description: </span><p className='desc'>{dog.Description}</p> <br />
+              <span className='bold'>  Story: </span><p className='desc'>{dog.Story}</p>
+            </div>
+            <button onClick={this.deleteDog()}>Adopt Dog</button>
           </div>
 
           <div className='cat'>
             <h2>Cat</h2>
-            <p>
+            <div>
               <span className='animalPic'></span><img className='picture' src={cat.image} alt='kitty' /> <br />
               <span className='bold'>  Name: </span>{cat.name} <br />
               <span className='bold'>  Breed: </span>{cat.Breed} <br />
               <span className='bold'>  Age: </span>{cat.Age} <br />
               <span className='bold'>  Sex: </span>{cat.Sex} <br />
-              <span className='bold'>  Description: </span><div className='desc'>{cat.Description}</div> <br />
-              <span className='bold'>  Story: </span><div className='desc'>{cat.Story}</div>
-            </p>
-            <button>Adopt Cat</button>
+              <span className='bold'>  Description: </span><p className='desc'>{cat.Description}</p> <br />
+              <span className='bold'>  Story: </span><p className='desc'>{cat.Story}</p>
+            </div>
+            <button onClick={this.deleteCat()}>Adopt Cat</button>
           </div>
         </div>
         <div className='queue'>
