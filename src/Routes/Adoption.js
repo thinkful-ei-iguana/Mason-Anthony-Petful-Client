@@ -1,46 +1,130 @@
 import React from 'react';
 import './Adoption.css';
+import PeopleHelper from './RouteHelpers/PeopleHelper';
+import DogHelper from './RouteHelpers/DogHelper';
+import CatHelper from './RouteHelpers/CatHelper';
 
 export default class Adoption extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       error: null,
-      dogs: [],
-      cats: [],
+      dog: [],
+      cat: [],
+      queue: [],
+      isLoading: true,
     };
   }
   componentDidMount() {
-    this.getDogs();
-    this.getCats();
-  }
-
-
-  getDogs = () => {
+    this.getDog();
+    this.getCat();
+    this.getQueue();
 
   }
 
-  getCats = () => {
 
+  getDog = () => {
+    DogHelper.getDog()
+      .then(res => res.json())
+      .then(dog => this.setState({ dog }))
+      .catch((error) => {
+        this.setState({ error })
+      })
   }
+
+  deleteDog = () => {
+    DogHelper.deleteDog();
+    this.deletePerson();
+    this.getDog();
+  }
+
+  getCat = () => {
+    CatHelper.getCat()
+      .then(res => res.json())
+      .then(cat => this.setState({ cat }))
+      .catch((error) => {
+        this.setState({ error })
+      })
+  }
+
+  deleteCat = () => {
+    CatHelper.deleteCat();
+    this.deletePerson();
+    this.getCat();
+  }
+
+  getQueue = () => {
+    PeopleHelper.getQueue()
+      .then(res => res.json())
+      .then(queue => this.setState({ queue, isLoading: false }))
+      .catch((error) => {
+        this.setState({ error })
+      })
+  }
+
+  deletePerson = () => {
+    PeopleHelper.deletePerson();
+    this.getQueue();
+  }
+
+  display = (q) => {
+    let str = '';
+    let currNode = q.first
+    while (currNode !== null) {
+      str += currNode.value.name + ', ';
+      currNode = currNode.next;
+    }
+    return (str);
+  }
+
+  Loading = () => {
+    return this.state.isLoading ? (
+      <h3 className='Loading'>Loading...</h3>
+    ) : (
+        this.display(this.state.queue)
+      );
+  };
 
   render() {
+    const dog = this.state.dog;
+    const cat = this.state.cat;
+
+
     return (
       <div className='Adoption'>
-        <h1>Adoption Process</h1>
-        <div className='dog'>
-          <h2>Dogs</h2>
-          dog info here
-        </div>
+        <h1>Petful Adoption</h1>
+        <div className='animals'>
+          <div className='dog'>
+            <h2>Dog</h2>
+            <div className='content'>
+              <span className='animalPic'></span><img className='picture' src={dog.image} alt='puppy' /> <br />
+              <span className='bold'>  Name: </span>{dog.name} <br />
+              <span className='bold'>  Breed: </span>{dog.Breed} <br />
+              <span className='bold'>  Age: </span>{dog.Age} <br />
+              <span className='bold'>  Sex: </span>{dog.Sex} <br />
+              <span className='bold'>  Description: </span><p className='desc'>{dog.Description}</p> <br />
+              <span className='bold'>  Story: </span><p className='desc'>{dog.Story}</p>
+            </div>
+            <button type='click' onClick={() => this.deleteDog()}>Adopt Dog</button>
+          </div>
 
-        <div className='cat'>
-          <h2>Cats</h2>
-          cat info here
+          <div className='cat'>
+            <h2>Cat</h2>
+            <div className='content'>
+              <span className='animalPic'></span><img className='picture' src={cat.image} alt='kitty' /> <br />
+              <span className='bold'>  Name: </span>{cat.name} <br />
+              <span className='bold'>  Breed: </span>{cat.Breed} <br />
+              <span className='bold'>  Age: </span>{cat.Age} <br />
+              <span className='bold'>  Sex: </span>{cat.Sex} <br />
+              <span className='bold'>  Description: </span><p className='desc'>{cat.Description}</p> <br />
+              <span className='bold'>  Story: </span><p className='desc'>{cat.Story}</p>
+            </div>
+            <button onClick={() => this.deleteCat()}>Adopt Cat</button>
+          </div>
         </div>
-
-        <div>
+        <div className='queue'>
           <h3>Place in line</h3>
-          queue info goes here
+          {this.Loading()}
         </div>
       </div>
     );

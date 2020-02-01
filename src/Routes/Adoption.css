@@ -1,3 +1,65 @@
 h1 {
   text-align: center;
 }
+
+.picture {
+  display: flex;
+  margin: 0 auto 0;
+  flex-shrink: 1;
+  max-width: 358px;
+  max-height: 500px;
+}
+
+.desc {
+  max-width: 70%;
+  margin: 0 auto 0;
+}
+
+.queue {
+  text-align: center;
+}
+
+.dog {
+  max-width: 45%;
+  text-align: center;
+}
+.cat {
+  max-width: 45%;
+  text-align: center;
+}
+.animals {
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .cat {
+    margin: 0 auto 0;
+    max-width: 100%;
+  }
+  .dog {
+    margin: 0 auto 0;
+    max-width: 100%;
+  }
+  .animals {
+    display: block;
+    margin: 0 auto 0;
+    text-align: center;
+  }
+  .picture {
+    display: block;
+    max-width: 80%;
+  }
+  .content {
+    text-align: center;
+    margin: 0 auto 0;
+  }
+  .desc {
+    text-align: center;
+  }
+}
