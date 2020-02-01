@@ -32,10 +32,10 @@ export default class Adoption extends React.Component {
       })
   }
 
-  deleteDog = () => {
-    DogHelper.deleteDog();
-    this.deletePerson();
-  }
+  // deleteDog = () => {
+  //   DogHelper.deleteDog();
+  //   this.deletePerson();
+  // }
 
   getCat = () => {
     CatHelper.getCat()
@@ -46,10 +46,10 @@ export default class Adoption extends React.Component {
       })
   }
 
-  deleteCat = () => {
-    CatHelper.deleteCat();
-    this.deletePerson();
-  }
+  // deleteCat = () => {
+  //   CatHelper.deleteCat();
+  //   this.deletePerson();
+  // }
 
   getQueue = () => {
     PeopleHelper.getQueue()
@@ -60,9 +60,9 @@ export default class Adoption extends React.Component {
       })
   }
 
-  deletePerson = () => {
-    PeopleHelper.deletePerson();
-  }
+  // deletePerson = () => {
+  //   PeopleHelper.deletePerson();
+  // }
 
   display = (q) => {
     let str = '';
@@ -102,7 +102,7 @@ export default class Adoption extends React.Component {
               <span className='bold'>  Description: </span><p className='desc'>{dog.Description}</p> <br />
               <span className='bold'>  Story: </span><p className='desc'>{dog.Story}</p>
             </div>
-            <button onClick={this.deleteDog()}>Adopt Dog</button>
+            {/* <button onClick={this.deleteDog()}>Adopt Dog</button> */}
           </div>
 
           <div className='cat'>
@@ -116,7 +116,7 @@ export default class Adoption extends React.Component {
               <span className='bold'>  Description: </span><p className='desc'>{cat.Description}</p> <br />
               <span className='bold'>  Story: </span><p className='desc'>{cat.Story}</p>
             </div>
-            <button onClick={this.deleteCat()}>Adopt Cat</button>
+            {/* <button onClick={this.deleteCat()}>Adopt Cat</button> */}
           </div>
         </div>
         <div className='queue'>
