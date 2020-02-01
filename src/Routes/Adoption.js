@@ -96,7 +96,7 @@ export default class Adoption extends React.Component {
         <div className='animals'>
           <div className='dog'>
             <h2>Dog</h2>
-            <div>
+            <div className='content'>
               <span className='animalPic'></span><img className='picture' src={dog.image} alt='puppy' /> <br />
               <span className='bold'>  Name: </span>{dog.name} <br />
               <span className='bold'>  Breed: </span>{dog.Breed} <br />
@@ -110,7 +110,7 @@ export default class Adoption extends React.Component {
 
           <div className='cat'>
             <h2>Cat</h2>
-            <div>
+            <div className='content'>
               <span className='animalPic'></span><img className='picture' src={cat.image} alt='kitty' /> <br />
               <span className='bold'>  Name: </span>{cat.name} <br />
               <span className='bold'>  Breed: </span>{cat.Breed} <br />

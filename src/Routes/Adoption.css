@@ -12,13 +12,13 @@ h1 {
 }
 
 .desc {
-  max-width: 40%;
+  max-width: 70%;
   margin: 0 auto 0;
 }
 
-.Adoption{
+
   
-}
+
 
 .queue{
  text-align: center;
@@ -40,4 +40,34 @@ h1 {
 
 .bold {
   font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .cat {
+    
+
+    margin: 0 auto 0;
+    max-width:100%;
+  }
+  .dog{
+    
+    margin: 0 auto 0;
+    max-width:100%;
+  }
+  .animals{
+    display: block;
+    margin: 0 auto 0;
+    text-align: center;
+  }
+  .picture{
+    display: block;
+    max-width: 80%;
+  }
+  .content{
+    text-align: center;
+    margin: 0 auto 0;
+  }
+  .desc{
+    text-align: center;
+  }
 }
